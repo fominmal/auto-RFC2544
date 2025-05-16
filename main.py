@@ -59,7 +59,7 @@ def configuring_QSR(port, baudrate=115200, timeout=1):
 
 def configuring_QSW(port, baudrate=9600, timeout=1):
     #try:
-    #ser = serial.Serial(port, baudrate, timeout=timeout)
+    ser = 'prikol'# serial.Serial(port, baudrate, timeout=timeout)
     print(b"\n")
     '''while True:
         #response = ser.read(100)
@@ -79,6 +79,7 @@ def configuring_QSW(port, baudrate=9600, timeout=1):
         return 0"""
     intf_count = input ("\n\nУкажите число портов устройства: ")
     print("Импортирую конфигурацию по заданным параметрам...")
+    snake_configuration(ser, 'QSW', intf_count)
     
 
 if __name__ == "__main__":
